@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm Hàng Hóa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Quản lý hàng hóa</h2>    
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Hh Id</th>
+                        <th scope="col">Nhh Id</th>
+                        <th scope="col">Hh Mã</th>
+                        <th scope="col">Hh Tên</th>
+                        <th scope="col">Hh Gía Nhập</th>
+                        <th scope="col">Hh Giá Bán</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList"> 
+                    
+                    </tbody>
+            </table>
+
+        <form id="additemForm">
+
+            <div class="inputbox">
+                <label for="">Hh Id</label>
+                <input type="number" id="hhId" required>
+            </div>
+
+            <div class="inputbox">
+                <label for="">Nhh Id</label>
+                <select name="" id="NhhId"></select>`
+            </div>
+
+            <div class="inputbox">
+                <label for="">Hh Mã</label>
+                <input type="text" id="Hhma">
+            </div>
+            <div class="inputbox">
+                <label for="">Hh Tên</label>
+                <input type="text" id="Hhten" required>
+            </div>
+
+            <div class="inputbox">
+                <label for="">Hh Gía Nhập</label>
+                <input type="number" id="hhgiapnhap">
+            </div>
+
+            <div class="inputbox">
+                <label for="">Hh Gía Bán</label>
+                <input type="number" id="Hhgiaban">
+            </div>
+            
+            <div class="buttonbox">
+                <button class="addbutton" type="button" onclick="additem()">Thêm</button>
+                <br>
+                <button class="cancelbutton" type="button" onclick="cancelitem()">Hủy</button>
+                <br>
+                <button type = "button" onclick="deleteitem()">Xóa</button>    
+                <br>
+                <button type = "button" onclick="edititem()">Sửa</button>
+                <br>
+                <a href="index.html"> <button type = "button">quản lí nhóm hàng hóa</button></a>
+            </div>
+            
+        </form>
+    </div>
+    <div class="container">
+        <h2>Tìm Kiếm</h2>    
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Hh Id</th>
+                        <th scope="col">Nhh Id</th>
+                        <th scope="col">Hh Mã</th>
+                        <th scope="col">Hh Tên</th>
+                        <th scope="col">Hh Gía Nhập</th>
+                        <th scope="col">Hh Giá Bán</th>
+                    </tr>
+                </thead>
+                <tbody id="itemList1"> 
+                    
+                    </tbody>
+            </table>
+
+        <form id="additemForm1">
+
+            <div class="inputbox">
+                <label for="">keyword</label>
+                <input type="text" id="textSearch" required>
+            </div>
+            
+            <div class="buttonbox">
+                <button class="addbutton" type="button" onclick="search()">tìm kiếm</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
+
